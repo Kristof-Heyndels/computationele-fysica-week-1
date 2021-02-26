@@ -17,7 +17,7 @@ double distance(std::tuple<double,double> p1, std::tuple<double,double> p2) {
 
 int main(int argc, char* argv[]) {
   if (argc != 5) {
-    std::cout << "Please enter 4 arguments! (x1,y1,x2,y2)";
+    std::cout << "Please enter 4 arguments! (x1,y1,x2,y2)\n";
     return 1;  
   }
 
