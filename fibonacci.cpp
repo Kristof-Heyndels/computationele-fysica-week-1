@@ -1,7 +1,7 @@
 #include <iostream>
 
-int fibonacci (int n) {
-  
+int fibonacci(int n) 
+{  
   if (n == 1) {
     return 1;
   } else if (n > 1) {
@@ -10,7 +10,8 @@ int fibonacci (int n) {
   return 1;
 }
 
-int main (int argc, char* argv[]){
+int main(int argc, char* argv[])
+{
   if (argc != 2) {
     std::cout << "Please input as one arguement the length of the series you want to print.\n";
     return 1;
