@@ -24,8 +24,7 @@ int main(int argc, char* argv[]){
   }
 
   for (int i = 0; i != length; ++i){
-    std::cout << fibonacci(i) << " ";  
+    std::cout << fibonacci(i) << "\n";  
   }
-  std:: cout << "\n";
   return 0;
 }
