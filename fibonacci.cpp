@@ -2,21 +2,17 @@
 
 int fibonacci(int n) 
 {
-  if (n == 1) {
-    return 1;
-  } 
-  else if (n > 1) {
-    int f_n_1 {1};
-    int f_n {1};
-    
-    for (int i = 2; i != n; ++i) {
-      int tmp (f_n);
+  int f_n_1 {1};
+  int f_n {1};
 
-      f_n += f_n_1;
-      f_n_1 = tmp;
-    }
-  }  
-  return 1;
+  for (int i = 2; i != n; ++i) {
+    int tmp (f_n);
+
+    f_n += f_n_1;
+    f_n_1 = tmp;
+  }
+
+  return f_n;
 }
 
 int main(int argc, char* argv[])
