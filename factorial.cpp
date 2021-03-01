@@ -1,17 +1,11 @@
 #include <iostream>
 
-int factorial(int n, bool& error) {
-  int fac {1};
-
-  if(n >= 0) {
-    for (int i = 1; i <= n; ++i) {
-      fac *= i;
-    }
-    error = false;
-    return fac;
+int factorial(int n) {
+  if(n == 0) {
+    return 1;
+  } else {
+    return n * factorial(n-1);
   }
-  error = true;
-  return 0;
 }
 
 int main(int argc, char* argv[]) {
@@ -21,14 +15,9 @@ int main(int argc, char* argv[]) {
   }
 
   int n = std::stoi(argv[1]);
-  bool has_error;
 
-  int result = factorial(n, has_error);
-  if (!has_error) {
-    std::cout << "fac(" << n << ")=" << result << "\n";
-  } else {
-    std::cout << "Error: negative value\n";
-  }
+  int result = factorial(n);
+  std::cout << "fac(" << n << ")=" << result << "\n";
 
   return 0;  
 }
